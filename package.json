@@ -1,0 +1,54 @@
+{
+  "name": "snapgram",
+  "private": false,
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "Amir Pourhadi",
+    "email": "AmirPourhadi@outlook.com"
+  },
+  "repository": "https://github.com/Amir-Pourhadi/Snapgram",
+  "homepage": "https://amir-snapgram.netlify.app",
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "preview:test": "yarn build && yarn preview",
+    "test": "start-test 'yarn preview:test' http://localhost:4173 \"yarn cy:unit && yarn cy:e2e --config baseUrl=http://localhost:4173\"",
+    "lint:check": "eslint '**/*.{ts,tsx}' --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint --fix '**/*.{ts,tsx}'",
+    "pretty": "prettier '**/*' --write --ignore-unknown",
+    "cy:open": "cypress open",
+    "cy:unit": "cypress run --component",
+    "cy:e2e": "cypress run --e2e"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.57",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "cypress": "^13.6.5",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-check-file": "^2.7.0",
+    "eslint-plugin-cypress": "^2.15.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "start-server-and-test": "^2.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4"
+  }
+}

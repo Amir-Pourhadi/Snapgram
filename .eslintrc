@@ -1,0 +1,43 @@
+{
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["./tsconfig.json", "./tsconfig.vite.json"]
+  },
+  "plugins": ["react", "react-hooks", "jsx-a11y", "cypress", "react-refresh", "check-file", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:cypress/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+    "check-file/filename-naming-convention": [
+      "error",
+      { "**/*{.cy,.test,.spec}.tsx": "PASCAL_CASE", "**/*{.d,.config}.ts": "CAMEL_CASE" },
+      { "ignoreMiddleExtensions": true }
+    ],
+    "check-file/folder-naming-convention": [
+      "error", { "**/": "CAMEL_CASE" }
+    ]
+  },
+  "root": true,
+  "ignorePatterns": ["dist"],
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

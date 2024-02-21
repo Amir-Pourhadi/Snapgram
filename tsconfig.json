@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "useDefineForClassFields": true,
+    "lib": ["ES6", "DOM", "DOM.Iterable"],
+    "types": ["cypress"],
+    "module": "ES6",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "removeComments": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "src"
+  },
+  "include": ["src", "cypress"],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.vite.json" }]
+}
