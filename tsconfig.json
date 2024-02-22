@@ -15,7 +15,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "types": ["cypress"],
+    "types": ["node", "cypress"],
     "removeComments": true,
     "outDir": "dist",
     "baseUrl": "src"
