@@ -18,7 +18,12 @@
     "types": ["node", "cypress"],
     "removeComments": true,
     "outDir": "dist",
-    "baseUrl": "src"
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@pages/*": ["src/root/pages/*"],
+      "@forms/*": ["src/auth/forms/*"]
+    }
   },
   "include": ["src", "cypress"],
   "exclude": ["node_modules"],

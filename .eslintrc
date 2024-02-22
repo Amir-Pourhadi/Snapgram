@@ -20,6 +20,10 @@
   "rules": {
     "no-console": "warn",
     "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "never", "children": "never", "propElementValues": "always" }
+    ],
     "check-file/filename-naming-convention": [
       "error",
       { "**/*{.cy,.test,.spec}.tsx": "PASCAL_CASE", "**/*{.d,.config}.ts": "CAMEL_CASE" },

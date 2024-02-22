@@ -29,7 +29,7 @@ experience.
 - TypeScript
 - ShadCN
 - Tailwind CSS
-- Cypress Component & E2e Testing
+- Cypress E2E Testing
 
 ## 🔋 Features
 
@@ -60,7 +60,7 @@ enhance performance, Parallel queries for efficient data retrieval, First-class 
 👉 **Backend as a Service (BaaS) - Appwrite**: Utilize Appwrite as a Backend as a Service solution for streamlined
 backend development, offering features like authentication, database, file storage, and more
 
-👉 **Cypress as Testing**: Write component and end-to-end tests, that can run in CI/CD, locally, etc.
+👉 **Cypress as Testing**: Write end-to-end tests, that can run in CI/CD, locally, etc.
 
 and many more, including code architecture and re-usability
 

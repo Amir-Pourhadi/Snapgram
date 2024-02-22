@@ -2,6 +2,6 @@ describe("HomePage", () => {
   it("should visit HomePage", () => {
     cy.visit("/");
 
-    cy.contains(/^Hello World!$/).should("be.visible");
+    cy.contains(/^RootLayout$/).should("be.visible");
   });
 });

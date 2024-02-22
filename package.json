@@ -1,5 +1,6 @@
 {
   "name": "snapgram",
+  "description": "A Social Media App",
   "private": false,
   "version": "1.0.0",
   "license": "UNLICENSED",
@@ -15,17 +16,17 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "start-test \"yarn build && yarn preview\" http://localhost:4173 \"yarn cy:unit && yarn cy:e2e --config baseUrl=http://localhost:4173\"",
+    "test": "start-test \"tsc && vite build -l silent && vite preview -l silent \" http://localhost:4173 'cypress run -q -c baseUrl=http://localhost:4173'",
     "lint:check": "eslint '**/*.{ts,tsx}' --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint --fix '**/*.{ts,tsx}'",
     "pretty": "prettier '**/*' --write --ignore-unknown",
     "cy:open": "cypress open",
-    "cy:unit": "cypress run --component",
-    "cy:e2e": "cypress run --e2e"
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.19",
