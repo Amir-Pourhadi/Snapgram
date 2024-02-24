@@ -13,15 +13,14 @@
   "type": "module",
   "scripts": {
     "prepare": "husky",
-    "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "start-test \"tsc && vite build -l silent && vite preview -l silent \" http://localhost:4173 'cypress run -q -c baseUrl=http://localhost:4173'",
+    "test": "cypress run",
+    "test:ci": "start-test vite http://localhost:5173 'cypress run'",
     "lint:check": "eslint '**/*.{ts,tsx}' --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint --fix '**/*.{ts,tsx}'",
     "pretty": "prettier '**/*' --write --ignore-unknown",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -29,6 +28,7 @@
     "react-router-dom": "^6.22.1"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.12.24",
     "@types/node": "^20.11.19",
     "@types/react": "^18.2.57",
     "@types/react-dom": "^18.2.19",
@@ -48,13 +48,15 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
+    "nyc": "^15.1.0",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
     "start-server-and-test": "^2.0.3",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.2.2",
-    "vite": "^5.1.4"
+    "vite": "^5.1.4",
+    "vite-plugin-istanbul": "^5.0.0"
   },
   "lint-staged": {
     "*": [

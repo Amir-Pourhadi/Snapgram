@@ -1,0 +1,27 @@
+name: Test, Coverage and Code Quality
+on:
+  push:
+    branches:
+      - main
+jobs:
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install Dependencies
+        run: yarn
+      - name: Test and Coverage
+        run: yarn test:ci
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          args: >
+            -Dsonar.organization=amir-pourhadi
+            -Dsonar.projectKey=Amir-Pourhadi_Snapgram
+            -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
+            -Dsonar.coverage.exclusions=cypress/*/**,*.config.ts
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

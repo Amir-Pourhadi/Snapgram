@@ -7,6 +7,7 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Amir-Pourhadi_Snapgram&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Amir-Pourhadi_Snapgram)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Amir-Pourhadi_Snapgram&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=Amir-Pourhadi_Snapgram)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Amir-Pourhadi_Snapgram&metric=security_rating)](https://sonarcloud.io/dashboard?id=Amir-Pourhadi_Snapgram)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Amir-Pourhadi_Snapgram&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Amir-Pourhadi_Snapgram)
 
 <h3 align="center">A Social Media Application</h3>
 
