@@ -18,7 +18,7 @@
     "plugin:jsx-a11y/recommended"
   ],
   "rules": {
-    "no-console": "warn",
+    "no-console": "error",
     "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }],
     "react/jsx-curly-brace-presence": [
       "error",
@@ -26,7 +26,7 @@
     ],
     "check-file/filename-naming-convention": [
       "error",
-      { "**/*{.cy,.test,.spec}.tsx": "PASCAL_CASE", "**/*{.d,.config}.ts": "CAMEL_CASE" },
+      { "**/!(main)*{.cy,.test,.spec,}.tsx": "PASCAL_CASE", "**/*{.d,.config,}.ts": "CAMEL_CASE" },
       { "ignoreMiddleExtensions": true }
     ],
     "check-file/folder-naming-convention": [

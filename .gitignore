@@ -10,6 +10,7 @@ lerna-debug.log*
 # Coverage
 .nyc_output
 coverage
+cypress/screenshots
 
 node_modules
 dist

@@ -10,5 +10,7 @@ export default defineConfig({
       registerCodeCoverageTasks(on, config);
       return config;
     },
+    viewportWidth: 1920,
+    viewportHeight: 1080,
   },
 });
